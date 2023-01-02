@@ -1,0 +1,41 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          cache: 'npm'
+      - uses: nrwl/nx-set-shas@v3
+      - run: yarn install --frozen-lockfile
+      - run: npx nx workspace-lint
+      - run: npx nx format:write
+      - run: npx nx affected --target=lint --parallel=3
+      - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
+      # - run: npx nx run films:build --configuration=production
+      - run: npx nx run-many --target=build --configuration=production
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist/**
+      - uses: actions/download-artifact@v3
+        with:
+          name: dist   
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: 'mfe-app-poc'
+          AWS_ACCESS_KEY_ID: 'AKIAWXYXQYUMH43GXP7J'
+          AWS_SECRET_ACCESS_KEY: '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'
+          AWS_REGION: 'ap-south-1'
+          SOURCE_DIR: 'dist/apps'
