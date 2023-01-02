@@ -34,7 +34,7 @@ jobs:
           args: --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: 'mfe-app-poc'
-          AWS_ACCESS_KEY_ID: 'AKIAWXYXQYUMH43GXP7J'
-          AWS_SECRET_ACCESS_KEY: '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'
+          AWS_ACCESS_KEY_ID: 'AKIAWXYXQYUMKUF7TMPT'
+          AWS_SECRET_ACCESS_KEY: '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'
           AWS_REGION: 'ap-south-1'
           SOURCE_DIR: 'dist/apps'
