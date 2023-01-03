@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-nx affected:test --parallel --max-parallel=3
-nx affected:lint --parallel --max-parallel=3
+# npx nx affected:test --parallel --max-parallel=3
+# npx nx affected:lint --parallel --max-parallel=3

@@ -26,9 +26,9 @@ const prodConfig = {
    * ]
    */
   remotes: [
-    ['films', process.env.FILMS_URL || 'http://localhost:4201/'],
-    ['planets', process.env.PLANETS_URL || 'http://localhost:4202/'],
-    ['starships', process.env.STARSHIPS_URL || 'http://localhost:4203/'],
+    ['films', 'https://films.microapps.tk/'],
+    ['planets', 'https://planets.microapps.tk/'],
+    ['starships', 'https://starships.microapps.tk/'],
   ],
 };
 
