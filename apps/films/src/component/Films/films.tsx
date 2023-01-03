@@ -1,5 +1,5 @@
 import { DataList, Loading } from '@ui';
-import React from 'react'
+import React from 'react';
 import { useQuery } from 'react-query';
 
 interface Film {
@@ -15,16 +15,20 @@ const getFilms = async () => {
 };
 
 const Films = () => {
-  const { isLoading, data } = useQuery<Array<Film>>('films', getFilms, { staleTime: Infinity });
+  const { isLoading, data } = useQuery<Array<Film>>('films', getFilms, {
+    staleTime: Infinity,
+  });
 
   if (isLoading || !data) return <Loading />;
 
   return (
     <div>
       <h1>Welcome to Films!</h1>
-      <DataList items={data.map(item => ({ title: item.title, url: item.url }))} />
+      <DataList
+        items={data.map((item) => ({ title: item.title, url: item.url }))}
+      />
     </div>
   );
-}
+};
 
-export default Films
+export default Films;

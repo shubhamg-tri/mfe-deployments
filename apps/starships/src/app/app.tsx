@@ -4,7 +4,6 @@ import Planet from '../component/Starship';
 import Planets from '../component/Starships';
 
 export function App(props: { queryClient: QueryClient }) {
-
   return (
     <QueryClientProvider client={props.queryClient}>
       <Routes>

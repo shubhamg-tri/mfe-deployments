@@ -14,16 +14,20 @@ const getPlanets = async () => {
 };
 
 const Films = () => {
-  const { isLoading, data } = useQuery<Array<Planet>>('planets', getPlanets, { staleTime: Infinity });
+  const { isLoading, data } = useQuery<Array<Planet>>('planets', getPlanets, {
+    staleTime: Infinity,
+  });
 
-  if (isLoading || !data) return <Loading />
+  if (isLoading || !data) return <Loading />;
 
   return (
     <div>
       <h1>Welcome to Planets!</h1>
-      <DataList items={data.map(item => ({ title: item.name, url: item.url }))} />
+      <DataList
+        items={data.map((item) => ({ title: item.name, url: item.url }))}
+      />
     </div>
   );
-}
+};
 
-export default Films
+export default Films;

@@ -54,7 +54,6 @@ export function App() {
               path="/starships/*"
               element={<Starships queryClient={queryClient} />}
             />
-
           </Routes>
         </main>
       </div>

@@ -19,7 +19,9 @@ export function DataList(props: DataListProps) {
 
         return (
           <li key={id}>
-            <Link className={styles.dataListItem} to={id}>{item.title}</Link>
+            <Link className={styles.dataListItem} to={id}>
+              {item.title}
+            </Link>
           </li>
         );
       })}

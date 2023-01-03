@@ -29,7 +29,7 @@ jobs:
           path: dist/**
       - uses: actions/download-artifact@v3
         with:
-          name: dist   
+          name: dist
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --follow-symlinks --delete

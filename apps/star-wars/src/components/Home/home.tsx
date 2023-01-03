@@ -6,7 +6,7 @@ const home = () => {
       <h1>Welcome Home!!</h1>
       <img src={logo} alt="Star wars logo" />
     </div>
-  )
-}
+  );
+};
 
-export default home
+export default home;
