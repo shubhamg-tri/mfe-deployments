@@ -21,6 +21,7 @@ jobs:
       - run: npx nx affected --target=lint --parallel=3
       # - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
       - run: npx nx run-many --target=build --configuration=production
+      - run: cd dist/apps && mkdir www && cp -r star-wars/* www && cd ..
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
