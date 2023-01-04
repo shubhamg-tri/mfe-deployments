@@ -19,16 +19,18 @@ const getFilm = async (id: string | undefined) => {
 
 const Film = () => {
   const { id } = useParams<{ id: string }>();
-  const { isLoading, data } = useQuery<Film>(`film/${id}`, () => getFilm(id), { staleTime: Infinity });
+  const { isLoading, data } = useQuery<Film>(`film/${id}`, () => getFilm(id), {
+    staleTime: Infinity,
+  });
 
-  if (isLoading || !data) return <Loading />
+  if (isLoading || !data) return <Loading />;
 
   return (
     <Card title={data.title} description={data.opening_crawl}>
       <FilmInfo {...data} />
     </Card>
-  )
-}
+  );
+};
 
 const FilmInfo = (props: Film) => (
   <>
@@ -36,6 +38,6 @@ const FilmInfo = (props: Film) => (
     <p>Producers: {props.producer}</p>
     <p>Episode: {props.episode_id}</p>
   </>
-)
+);
 
-export default Film
+export default Film;

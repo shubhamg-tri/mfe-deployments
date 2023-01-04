@@ -18,16 +18,20 @@ const getPlanet = async (id: string | undefined) => {
 
 const Planet = () => {
   const { id } = useParams<{ id: string }>();
-  const { isLoading, data } = useQuery<Planet>(`planet/${id}`, () => getPlanet(id), { staleTime: Infinity });
+  const { isLoading, data } = useQuery<Planet>(
+    `planet/${id}`,
+    () => getPlanet(id),
+    { staleTime: Infinity }
+  );
 
-  if (isLoading || !data) return <Loading />
+  if (isLoading || !data) return <Loading />;
 
   return (
     <Card title={data.name}>
       <PlanetInfo {...data} />
     </Card>
-  )
-}
+  );
+};
 
 const PlanetInfo = (props: Planet) => (
   <>
@@ -35,6 +39,6 @@ const PlanetInfo = (props: Planet) => (
     <p>Terrain: {props.terrain}</p>
     <p>Population: {props.population}</p>
   </>
-)
+);
 
-export default Planet
+export default Planet;

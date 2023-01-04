@@ -16,7 +16,14 @@ export const Nav = (props: UiProps) => {
       <ul className={styles.list}>
         {props.listItems.map((item) => (
           <li key={item.url}>
-            <NavLink className={({ isActive }) => `${styles.listItem} ${isActive ? styles.listItemActive : ''}`} to={item.url}>{item.title}</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `${styles.listItem} ${isActive ? styles.listItemActive : ''}`
+              }
+              to={item.url}
+            >
+              {item.title}
+            </NavLink>
           </li>
         ))}
       </ul>

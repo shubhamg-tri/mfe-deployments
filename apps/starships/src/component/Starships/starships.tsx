@@ -14,16 +14,22 @@ const getStarships = async () => {
 };
 
 const Starships = () => {
-  const { isLoading, data } = useQuery<Array<Starship>>('starships', getStarships, { staleTime: Infinity });
+  const { isLoading, data } = useQuery<Array<Starship>>(
+    'starships',
+    getStarships,
+    { staleTime: Infinity }
+  );
 
-  if (isLoading || !data) return <Loading />
+  if (isLoading || !data) return <Loading />;
 
   return (
     <div>
       <h1>Welcome to New Starships!</h1>
-      <DataList items={data.map(item => ({ title: item.name, url: item.url }))} />
+      <DataList
+        items={data.map((item) => ({ title: item.name, url: item.url }))}
+      />
     </div>
   );
-}
+};
 
-export default Starships
+export default Starships;

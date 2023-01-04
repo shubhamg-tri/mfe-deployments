@@ -18,16 +18,20 @@ const getStarship = async (id: string | undefined) => {
 
 const Starship = () => {
   const { id } = useParams<{ id: string }>();
-  const { isLoading, data } = useQuery<Starship>(`starship/${id}`, () => getStarship(id), { staleTime: Infinity });
+  const { isLoading, data } = useQuery<Starship>(
+    `starship/${id}`,
+    () => getStarship(id),
+    { staleTime: Infinity }
+  );
 
-  if (isLoading || !data) return <Loading />
+  if (isLoading || !data) return <Loading />;
 
   return (
     <Card title={data.name}>
       <StarshipInfo {...data} />
     </Card>
-  )
-}
+  );
+};
 
 const StarshipInfo = (props: Starship) => (
   <>
@@ -35,6 +39,6 @@ const StarshipInfo = (props: Starship) => (
     <p>Terrain: {props.terrain}</p>
     <p>Population: {props.population}</p>
   </>
-)
+);
 
-export default Starship
+export default Starship;

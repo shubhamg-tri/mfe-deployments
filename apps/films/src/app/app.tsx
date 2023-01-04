@@ -4,7 +4,6 @@ import Film from '../component/Film';
 import Films from '../component/Films';
 
 export function App(props: { queryClient: QueryClient }) {
-
   return (
     <QueryClientProvider client={props.queryClient}>
       <Routes>
