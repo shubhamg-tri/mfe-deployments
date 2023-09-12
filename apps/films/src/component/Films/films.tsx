@@ -1,24 +1,8 @@
 import { DataList, Loading } from '@ui';
-import React from 'react';
-import { useQuery } from 'react-query';
-
-interface Film {
-  title: string;
-  url: string;
-}
-
-const getFilms = async () => {
-  const res = await fetch('https://swapi.dev/api/films/');
-  const data = await res.json();
-
-  return data.results;
-};
+import { useFilms } from '@films/api';
 
 const Films = () => {
-  const { isLoading, data } = useQuery<Array<Film>>('films', getFilms, {
-    staleTime: Infinity,
-  });
-
+  const { isLoading, data } = useFilms();
   if (isLoading || !data) return <Loading />;
 
   return (

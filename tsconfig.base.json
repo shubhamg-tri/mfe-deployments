@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@films/api": ["libs/films/api/src/index.ts"],
       "@ui": ["libs/ui/src/index.ts"]
     }
   },
