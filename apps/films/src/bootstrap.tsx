@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 
 root.render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/films'>
       <App queryClient={queryClient} />
     </BrowserRouter>
   </StrictMode>

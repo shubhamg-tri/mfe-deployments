@@ -26,9 +26,9 @@ const prodConfig = {
    * ]
    */
   remotes: [
-    ['films', 'https://films.microapps.tk/'],
-    ['planets', 'https://planets.microapps.tk/'],
-    ['starships', 'https://starships.microapps.tk/'],
+    ['films', 'https://dibzupfv5xve3.cloudfront.net/films'],
+    ['planets', 'https://dibzupfv5xve3.cloudfront.net/planets'],
+    ['starships', 'https://dibzupfv5xve3.cloudfront.net/starships'],
   ],
 };
 

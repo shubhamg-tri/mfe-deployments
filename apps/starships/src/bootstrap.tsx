@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 
 root.render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/starships">
       <App queryClient={queryClient} />
     </BrowserRouter>
   </StrictMode>
