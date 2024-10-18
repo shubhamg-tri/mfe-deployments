@@ -26,9 +26,9 @@ const prodConfig = {
    * ]
    */
   remotes: [
-    ['films', 'https://dibzupfv5xve3.cloudfront.net/films'],
-    ['planets', 'https://dibzupfv5xve3.cloudfront.net/planets'],
-    ['starships', 'https://dibzupfv5xve3.cloudfront.net/starships'],
+    ['films', 'https://dibzupfv5xve3.cloudfront.net/films/remoteEntry.js'],
+    ['planets', 'https://dibzupfv5xve3.cloudfront.net/planets/remoteEntry.js'],
+    ['starships', 'https://dibzupfv5xve3.cloudfront.net/starships/remoteEntry.js'],
   ],
 };
 
