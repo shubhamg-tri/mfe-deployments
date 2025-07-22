@@ -7,10 +7,10 @@ interface Planet {
 }
 
 const getPlanets = async () => {
-  const res = await fetch('https://swapi.dev/api/planets/');
+  const res = await fetch('https://swapi.info/api/planets');
   const data = await res.json();
 
-  return data.results;
+  return data;
 };
 
 const Films = () => {

@@ -2,7 +2,7 @@ import { useQuery } from 'react-query';
 import { Film } from './useFilms';
 
 const getFilm = async (id: string | undefined) => {
-  const res = await fetch(`https://swapi.dev/api/films/${id}`);
+  const res = await fetch(`https://swapi.info/api/films/${id}`);
   const data = await res.json();
 
   return data;

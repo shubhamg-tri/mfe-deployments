@@ -10,10 +10,10 @@ export interface Film {
 }
 
 const getFilms = async () => {
-  const res = await fetch('https://swapi.dev/api/films/');
+  const res = await fetch('https://swapi.info/api/films');
   const data = await res.json();
 
-  return data.results;
+  return data;
 };
 
 const useFilms = () => {

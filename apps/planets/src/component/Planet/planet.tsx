@@ -10,7 +10,7 @@ interface Planet {
 }
 
 const getPlanet = async (id: string | undefined) => {
-  const res = await fetch(`https://swapi.dev/api/planets/${id}`);
+  const res = await fetch(`https://swapi.info/api/planets/${id}`);
   const data = await res.json();
 
   return data;

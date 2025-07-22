@@ -7,10 +7,10 @@ interface Starship {
 }
 
 const getStarships = async () => {
-  const res = await fetch('https://swapi.dev/api/starships/');
+  const res = await fetch('https://swapi.info/api/starships');
   const data = await res.json();
 
-  return data.results;
+  return data;
 };
 
 const Starships = () => {
