@@ -15,7 +15,7 @@ export function DataList(props: DataListProps) {
     <ul className={styles.dataList}>
       {props.items.map((item) => {
         const splitUrl = item.url.split('/');
-        const id = splitUrl[splitUrl.length - 2];
+        const id = splitUrl[splitUrl.length - 1];
 
         return (
           <li key={id}>
