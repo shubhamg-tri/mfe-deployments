@@ -26,9 +26,9 @@ const prodConfig = {
    * ]
    */
   remotes: [
-    ['films', 'https://d18i34jhcy1otc.cloudfront.net/films/remoteEntry.js'],
-    ['planets', 'https://d18i34jhcy1otc.cloudfront.net/planets/remoteEntry.js'],
-    ['starships', 'https://d18i34jhcy1otc.cloudfront.net/starships/remoteEntry.js'],
+    ['films', 'https://mfe.vcard-devops.salucro-dev.com/films/remoteEntry.js'],
+    ['planets', 'https://mfe.vcard-devops.salucro-dev.com/planets/remoteEntry.js'],
+    ['starships', 'https://mfe.vcard-devops.salucro-dev.com/starships/remoteEntry.js'],
   ],
 };
 
